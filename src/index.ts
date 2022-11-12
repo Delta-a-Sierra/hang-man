@@ -76,7 +76,7 @@ const game = (state: GameState) => {
   testChoice(state)
     ? (state.hiddenWord = updateHiddenWord(state))
     : state.lives--;
-  game({ ...state, lives: state.lives });
+  game(state);
 };
 
 const newGame = () => {
